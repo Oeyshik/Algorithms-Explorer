@@ -81,11 +81,11 @@ Follow these steps to publish the Chrome extension for free on the Chrome Web St
 - A Google account to publish an extension.
 - Ensure your extension is properly developed, tested, and ready for public use.
 
-**Step 1: Prepare Your Extension**
+**Step 1: Prepare the Extension**
 
 Before publishing, make sure the extension is complete, well-tested, and adheres to Chrome's policies. Test it thoroughly to ensure it works as expected.
 
-**Step 2: Package Your Extension**
+**Step 2: Package the Extension**
 
 1. Create a `.zip` file containing all the necessary files for the extension. This typically includes HTML, CSS, JavaScript files, manifest.json, and any assets like icons or images.
 
