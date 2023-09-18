@@ -124,45 +124,12 @@ const algorithms = [
     }
 ];
 
-// function displayAlgorithm(index) {
-//     const algorithm = algorithms[index];
-//     document.querySelector('h1').textContent = algorithm.name;
-//     document.querySelector('p').textContent = `Time Complexity: ${algorithm.time_complexity}`;
-//   }
   
-//   document.addEventListener('DOMContentLoaded', () => {
-//     displayAlgorithm(algorithmIndex);
-  
-//     document.querySelector('#nextButton').addEventListener('click', () => {
-//       algorithmIndex = (algorithmIndex + 1) % algorithms.length;
-//       displayAlgorithm(algorithmIndex);
-//     });
-//   });
-  
-//   function displayAlgorithm(index) {
-//     const algorithm = algorithms[index];
-//     document.querySelector('h1').textContent = algorithm.name;
-//     document.querySelector('p#description').textContent = algorithm.description;
-//   }
-  
-//   document.addEventListener('DOMContentLoaded', () => {
-//     displayAlgorithm(algorithmIndex);
-  
-//     document.querySelector('#showDescription').addEventListener('click', () => {
-//       const description = document.querySelector('p#description');
-//       description.style.display = 'block';
-//     });
-  
-//     document.querySelector('#nextButton').addEventListener('click', () => {
-//       algorithmIndex = (algorithmIndex + 1) % algorithms.length;
-//       document.querySelector('p#description').style.display = 'none';
-//       displayAlgorithm(algorithmIndex);
-//     });
-//   });
-  
-  function displayAlgorithm(index) {
+function displayAlgorithm(index) {
     const algorithm = algorithms[index];
     document.querySelector('h1').textContent = algorithm.name;
+    document.querySelector('p#timeComplexity').textContent = `Time Complexity: ${algorithm.time_complexity}`;
+    document.querySelector('p#spaceComplexity').textContent = `Space Complexity: ${algorithm.space_complexity}`;
     document.querySelector('p#description').textContent = algorithm.description;
   }
   
@@ -170,11 +137,18 @@ const algorithms = [
     displayAlgorithm(algorithmIndex);
   
     document.querySelector('#showDescription').addEventListener('click', () => {
-      const description = document.querySelector('p#description');
       isDescriptionVisible = !isDescriptionVisible; // Toggle visibility
+      const description = document.querySelector('p#description');
       description.style.display = isDescriptionVisible ? 'block' : 'none';
     });
-  
+    
+    document.querySelector('#previousButton').addEventListener('click', () => {
+        algorithmIndex = (algorithmIndex - 1 + algorithms.length) % algorithms.length;
+        isDescriptionVisible = false; // Hide description when moving to the previous algorithm.
+        document.querySelector('p#description').style.display = 'none';
+        displayAlgorithm(algorithmIndex);
+      });
+      
     document.querySelector('#nextButton').addEventListener('click', () => {
       algorithmIndex = (algorithmIndex + 1) % algorithms.length;
       isDescriptionVisible = false; // Hide description when moving to the next algorithm.
@@ -182,6 +156,8 @@ const algorithms = [
       displayAlgorithm(algorithmIndex);
     });
   });
+
+  
   
   
   
