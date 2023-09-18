@@ -73,7 +73,7 @@ The project has the following structure:
 
 ![App Screenshot](https://drive.google.com/uc?id=1dKxDRdeEC0NdbovfjnKu4xX1Kn2hpjAu)
 
-## Publishing the Chrome Extension (Free)
+## Publishing the Chrome Extension
 
 Follow these steps to publish the Chrome extension for free on the Chrome Web Store:
 
