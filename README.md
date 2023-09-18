@@ -1,6 +1,6 @@
 # Algorithms Explorer
 
-![Algorithms Explorer Screenshot]([screenshot.png](https://drive.google.com/uc?id=1hEMtTIQ3IjOdpnq1mXJumx980zXdAv3P)
+![Algorithms Explorer Screenshot](https://drive.google.com/uc?id=1hEMtTIQ3IjOdpnq1mXJumx980zXdAv3P)
 
 Algorithms Explorer is a Google Chrome extension that provides an interactive way to learn about algorithm time complexities and space complexities. Explore a curated list of algorithms used in computer science and software development, and gain insights into their efficiency.
 
