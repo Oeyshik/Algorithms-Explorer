@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F6F62E;
+  }
+  
+  .popup-container {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5; /* Background color for the entire popup container */
+    border-radius: 10px; /* Rounded edges for the entire popup container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow for a stylish look */
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  
+  p#description {
+    font-size: 14px;
+    display: none;
+    margin: 10px 0;
+  }
+  
+  button {
+    margin-top: 20px;
+    background-color: #0073e6; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded edges for buttons */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow for a stylish look */
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #005ab4; /* Button background color on hover */
+    transform: translateY(-2px); /* Add a slight upward hover effect */
+  }
+  

@@ -1,0 +1,188 @@
+let algorithmIndex = 0;
+let isDescriptionVisible = false;
+
+const algorithms = [
+    {
+      "name": "Bubble Sort",
+      "time_complexity": "O(n^2)",
+      "space_complexity": "O(1)",
+      "description": "Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order."
+    },
+    {
+      "name": "Quick Sort",
+      "time_complexity": "O(n log n) average, O(n^2) worst case",
+      "space_complexity": "O(log n)",
+      "description": "Quick sort is a fast sorting algorithm that uses a divide-and-conquer approach to sort elements."
+    },
+    {
+      "name": "Merge Sort",
+      "time_complexity": "O(n log n)",
+      "space_complexity": "O(n)",
+      "description": "Merge sort is a stable and efficient sorting algorithm that uses a divide-and-conquer strategy."
+    },
+    {
+      "name": "Insertion Sort",
+      "time_complexity": "O(n^2)",
+      "space_complexity": "O(1)",
+      "description": "Insertion sort builds the final sorted array one item at a time."
+    },
+    {
+      "name": "Selection Sort",
+      "time_complexity": "O(n^2)",
+      "space_complexity": "O(1)",
+      "description": "Selection sort works by dividing the input list into two parts: the sorted part and the unsorted part."
+    },
+    {
+      "name": "Binary Search",
+      "time_complexity": "O(log n)",
+      "space_complexity": "O(1)",
+      "description": "Binary search finds the position of a target value within a sorted array."
+    },
+    {
+      "name": "Depth-First Search (DFS)",
+      "time_complexity": "O(V + E)",
+      "space_complexity": "O(V)",
+      "description": "Depth-first search explores as far as possible along each branch before backtracking."
+    },
+    {
+      "name": "Breadth-First Search (BFS)",
+      "time_complexity": "O(V + E)",
+      "space_complexity": "O(V)",
+      "description": "Breadth-first search explores all the vertices of a graph level by level."
+    },
+    {
+      "name": "Dijkstra's Algorithm",
+      "time_complexity": "O((V + E) log V)",
+      "space_complexity": "O(V)",
+      "description": "Dijkstra's algorithm finds the shortest path between nodes in a weighted graph."
+    },
+    {
+      "name": "Floyd-Warshall Algorithm",
+      "time_complexity": "O(V^3)",
+      "space_complexity": "O(V^2)",
+      "description": "Floyd-Warshall finds the shortest paths between all pairs of vertices in a weighted graph."
+    },
+    {
+      "name": "Knapsack Problem",
+      "time_complexity": "O(nW)",
+      "space_complexity": "O(nW)",
+      "description": "The knapsack problem seeks to find the most valuable combination of items to include in a knapsack without exceeding its capacity."
+    },
+    {
+      "name": "Prim's Algorithm",
+      "time_complexity": "O(V^2) with adjacency matrix, O(E + V log V) with adjacency list",
+      "space_complexity": "O(V)",
+      "description": "Prim's algorithm finds the minimum spanning tree of a weighted, connected graph."
+    },
+    {
+      "name": "Kruskal's Algorithm",
+      "time_complexity": "O(E log E)",
+      "space_complexity": "O(E + V)",
+      "description": "Kruskal's algorithm builds a minimum spanning tree by selecting edges in ascending order of weight."
+    },
+    {
+      "name": "Topological Sort",
+      "time_complexity": "O(V + E)",
+      "space_complexity": "O(V)",
+      "description": "Topological sort is an ordering of vertices in a directed acyclic graph such that for every directed edge, the source vertex comes before the target vertex."
+    },
+    {
+      "name": "Hashing (e.g., Hash Tables)",
+      "time_complexity": "Search Time Complexity: O(1) on average (amortized)",
+      "space_complexity": "Depends on the number of elements stored",
+      "description": "Hashing is a technique for efficient data retrieval based on the hash function."
+    },
+    {
+      "name": "Binary Search Tree (BST)",
+      "time_complexity": "Time Complexity (Average): O(log n)",
+      "space_complexity": "O(n)",
+      "description": "A binary search tree allows efficient insertion, deletion, and search operations."
+    },
+    {
+      "name": "Heap Sort",
+      "time_complexity": "O(n log n)",
+      "space_complexity": "O(1)",
+      "description": "Heap sort uses a binary heap data structure to build a sorted array."
+    },
+    {
+      "name": "Fibonacci Sequence (e.g., using recursion or dynamic programming)",
+      "time_complexity": "Time Complexity (Naive Recursive): O(2^n)",
+      "space_complexity": "Time Complexity (Dynamic Programming): O(n)",
+      "description": "The Fibonacci sequence is a sequence of numbers where each number is the sum of the two preceding ones."
+    },
+    {
+      "name": "Quicksort with 3-way Partition",
+      "time_complexity": "Time Complexity (Average): O(n log n)",
+      "space_complexity": "O(log n)",
+      "description": "Quicksort with a 3-way partition is an optimization of the quicksort algorithm that handles duplicate values more efficiently."
+    },
+    {
+      "name": "A* Search Algorithm",
+      "time_complexity": "Depends on the specific problem and heuristic function",
+      "space_complexity": "Depends on the specific problem and data structures used",
+      "description": "A* search is a pathfinding and graph traversal algorithm used in many applications, including navigation systems and AI."
+    }
+];
+
+// function displayAlgorithm(index) {
+//     const algorithm = algorithms[index];
+//     document.querySelector('h1').textContent = algorithm.name;
+//     document.querySelector('p').textContent = `Time Complexity: ${algorithm.time_complexity}`;
+//   }
+  
+//   document.addEventListener('DOMContentLoaded', () => {
+//     displayAlgorithm(algorithmIndex);
+  
+//     document.querySelector('#nextButton').addEventListener('click', () => {
+//       algorithmIndex = (algorithmIndex + 1) % algorithms.length;
+//       displayAlgorithm(algorithmIndex);
+//     });
+//   });
+  
+//   function displayAlgorithm(index) {
+//     const algorithm = algorithms[index];
+//     document.querySelector('h1').textContent = algorithm.name;
+//     document.querySelector('p#description').textContent = algorithm.description;
+//   }
+  
+//   document.addEventListener('DOMContentLoaded', () => {
+//     displayAlgorithm(algorithmIndex);
+  
+//     document.querySelector('#showDescription').addEventListener('click', () => {
+//       const description = document.querySelector('p#description');
+//       description.style.display = 'block';
+//     });
+  
+//     document.querySelector('#nextButton').addEventListener('click', () => {
+//       algorithmIndex = (algorithmIndex + 1) % algorithms.length;
+//       document.querySelector('p#description').style.display = 'none';
+//       displayAlgorithm(algorithmIndex);
+//     });
+//   });
+  
+  function displayAlgorithm(index) {
+    const algorithm = algorithms[index];
+    document.querySelector('h1').textContent = algorithm.name;
+    document.querySelector('p#description').textContent = algorithm.description;
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    displayAlgorithm(algorithmIndex);
+  
+    document.querySelector('#showDescription').addEventListener('click', () => {
+      const description = document.querySelector('p#description');
+      isDescriptionVisible = !isDescriptionVisible; // Toggle visibility
+      description.style.display = isDescriptionVisible ? 'block' : 'none';
+    });
+  
+    document.querySelector('#nextButton').addEventListener('click', () => {
+      algorithmIndex = (algorithmIndex + 1) % algorithms.length;
+      isDescriptionVisible = false; // Hide description when moving to the next algorithm.
+      document.querySelector('p#description').style.display = 'none';
+      displayAlgorithm(algorithmIndex);
+    });
+  });
+  
+  
+  
+  
