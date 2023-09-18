@@ -25,7 +25,7 @@ Algorithms Explorer is a Google Chrome extension that provides an interactive wa
 
 ## Installation
 
-1. Install the extension from the Chrome Web Store (link here).
+1. Install the extension from the Chrome Web Store (link will be provided here).
 
 2. Or, to build and install the extension manually:
 
