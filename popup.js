@@ -3,22 +3,16 @@ let isDescriptionVisible = false;
 
 const algorithms = [
     {
+      "name": "Selection Sort",
+      "time_complexity": "O(n^2)",
+      "space_complexity": "O(1)",
+      "description": "Selection sort works by dividing the input list into two parts: the sorted part and the unsorted part."
+    },
+    {
       "name": "Bubble Sort",
       "time_complexity": "O(n^2)",
       "space_complexity": "O(1)",
       "description": "Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order."
-    },
-    {
-      "name": "Quick Sort",
-      "time_complexity": "O(n log n) average, O(n^2) worst case",
-      "space_complexity": "O(log n)",
-      "description": "Quick sort is a fast sorting algorithm that uses a divide-and-conquer approach to sort elements."
-    },
-    {
-      "name": "Merge Sort",
-      "time_complexity": "O(n log n)",
-      "space_complexity": "O(n)",
-      "description": "Merge sort is a stable and efficient sorting algorithm that uses a divide-and-conquer strategy."
     },
     {
       "name": "Insertion Sort",
@@ -27,10 +21,16 @@ const algorithms = [
       "description": "Insertion sort builds the final sorted array one item at a time."
     },
     {
-      "name": "Selection Sort",
-      "time_complexity": "O(n^2)",
-      "space_complexity": "O(1)",
-      "description": "Selection sort works by dividing the input list into two parts: the sorted part and the unsorted part."
+      "name": "Merge Sort",
+      "time_complexity": "O(n log n)",
+      "space_complexity": "O(n)",
+      "description": "Merge sort is a stable and efficient sorting algorithm that uses a divide-and-conquer strategy."
+    },
+    {
+      "name": "Quick Sort",
+      "time_complexity": "O(n log n) average, O(n^2) worst case",
+      "space_complexity": "O(log n)",
+      "description": "Quick sort is a fast sorting algorithm that uses a divide-and-conquer approach to sort elements."
     },
     {
       "name": "Binary Search",
