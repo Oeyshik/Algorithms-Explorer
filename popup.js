@@ -10,7 +10,7 @@ const algorithms = [
     },
     {
       "name": "Bubble Sort",
-      "time_complexity": "<br>Average/Worst: O(N^2) <br>Best: O(N)",
+      "time_complexity": "Average/Worst: O(N^2) || Best: O(N)",
       "space_complexity": "O(1)",
       "description": "Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order."
     },
