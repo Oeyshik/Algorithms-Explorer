@@ -16,7 +16,7 @@ const algorithms = [
     },
     {
       "name": "Insertion Sort",
-      "time_complexity": "O(n^2)",
+      "time_complexity": "Average/Worst: O(N^2) || Best: O(N)",
       "space_complexity": "O(1)",
       "description": "Insertion sort builds the final sorted array one item at a time."
     },
