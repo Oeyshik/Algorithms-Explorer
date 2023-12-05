@@ -4,13 +4,14 @@ let isDescriptionVisible = false;
 const algorithms = [
     {
       "name": "Selection Sort",
-      "time_complexity": "O(n^2)",
+      "time_complexity": "O(N^2)",
       "space_complexity": "O(1)",
       "description": "Selection sort works by dividing the input list into two parts: the sorted part and the unsorted part."
     },
     {
       "name": "Bubble Sort",
-      "time_complexity": "O(n^2)",
+      "time_complexity": 
+                        "Average/Worst: O(N^2) Best: O(N)",
       "space_complexity": "O(1)",
       "description": "Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order."
     },
