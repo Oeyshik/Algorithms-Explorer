@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
     "name": "Algorithms Explorer",
-    "version": "1.0",
-    "description": "Learn about algorithm time complexities.",
+    "version": "1.0.0",
+    "description": "Quickly look up time & space complexities of common algorithms.",
     "action": {
       "default_popup": "popup.html",
       "default_icon": {
